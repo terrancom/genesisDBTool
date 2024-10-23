@@ -4,8 +4,12 @@
   "description": "Aplicacion para migrar bases de datos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "author": "Alberto Juan Gabino",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.0.2"
+  }
 }
+
