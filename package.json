@@ -1,0 +1,11 @@
+{
+  "name": "genesisdbtool",
+  "version": "1.0.0",
+  "description": "Aplicacion para migrar bases de datos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alberto Juan Gabino",
+  "license": "ISC"
+}
