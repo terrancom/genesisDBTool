@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genesis DB Tool</title>
+    <title>DB Connector</title>
 </head>
 <body>
-    
+    <h1>Conectar a Base de Datos</h1>
+    <form id="dbForm">
+        <input type="text" id="dbType" placeholder="Tipo de Base de Datos (mysql, postgresql, etc.)">
+        <input type="text" id="host" placeholder="Host">
+        <input type="text" id="user" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" id="database" placeholder="Nombre de Base de Datos">
+        <button type="submit">Conectar</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('dbForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const dbType = document.getElementById('dbType').value;
+            const config = {
+                host: document.getElementById('host').value,
+                user: document.getElementById('user').value,
+                password: document.getElementById('password').value,
+                database: document.getElementById('database').value,
+            };
+
+            const response = await window.electronAPI.connectToDB(dbType, config);
+            document.getElementById('response').innerText = response.message;
+        });
+    </script>
 </body>
 </html>
