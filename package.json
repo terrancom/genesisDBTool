@@ -2,7 +2,7 @@
   "name": "genesisdbtool",
   "version": "1.0.0",
   "description": "Aplicacion para migrar bases de datos",
-  "main": "index.js",
+  "main": "./src/main/index.js",
   "scripts": {
     "start": "electron ."
   },
