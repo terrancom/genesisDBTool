@@ -10,6 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^33.0.2"
+  },
+  "dependencies": {
+    "mariadb": "^3.3.2",
+    "mssql": "^11.0.1",
+    "mysql2": "^3.11.3",
+    "oracledb": "^6.6.0",
+    "pg": "^8.13.0",
+    "sqlite3": "^5.1.7"
   }
 }
-
